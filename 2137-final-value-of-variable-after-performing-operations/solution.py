@@ -1,10 +1,11 @@
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
-        v=0
-        for word in operations:
-            if word=='X++'or word=='++X':
-                v+=1
-            elif word=='X--' or word=='--X':
-                v-=1
-        return v            
+        X=0
+        for i in operations:
+            temp=i
+            if i=="--X" or i=="X--":
+                X-=1
+            elif i=="++X" or i=="X++":
+                X+=1
+        return X            
         
